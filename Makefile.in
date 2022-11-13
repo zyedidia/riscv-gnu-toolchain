@@ -426,7 +426,7 @@ stamps/build-gcc-linux-stage2: $(GCC_SRCDIR) $(GCC_SRC_GIT) $(addprefix stamps/b
 		@with_system_zlib@ \
 		--enable-shared \
 		--enable-tls \
-		--enable-languages=c,c++,fortran \
+		--enable-languages=c,c++,fortran,d \
 		--disable-libmudflap \
 		--disable-libssp \
 		--disable-libquadmath \
@@ -481,7 +481,7 @@ stamps/build-gcc-linux-native: $(GCC_SRCDIR) $(GCC_SRC_GIT) stamps/build-gcc-lin
 		--without-system-zlib \
 		--enable-shared \
 		--enable-tls \
-		--enable-languages=c,c++,fortran \
+		--enable-languages=c,c++,fortran,d \
 		--disable-libmudflap \
 		--disable-libssp \
 		--disable-libquadmath \
@@ -555,7 +555,7 @@ stamps/build-gcc-newlib-stage1: $(GCC_SRCDIR) $(GCC_SRC_GIT) stamps/build-binuti
 		--disable-shared \
 		--disable-threads \
 		--disable-tls \
-		--enable-languages=c,c++ \
+		--enable-languages=c,c++,d \
 		@with_system_zlib@ \
 		--with-newlib \
 		--with-sysroot=$(INSTALL_DIR)/$(NEWLIB_TUPLE) \
@@ -652,7 +652,7 @@ stamps/build-gcc-newlib-stage2: $(GCC_SRCDIR) $(GCC_SRC_GIT) stamps/build-newlib
 		--prefix=$(INSTALL_DIR) \
 		--disable-shared \
 		--disable-threads \
-		--enable-languages=c,c++ \
+		--enable-languages=c,c++,d \
 		--with-pkgversion="$(GCCPKGVER)" \
 		@with_system_zlib@ \
 		--enable-tls \
@@ -788,7 +788,7 @@ stamps/build-gcc-musl-stage2: $(GCC_SRCDIR) $(GCC_SRC_GIT) stamps/build-musl-lin
 		@with_system_zlib@ \
 		--enable-shared \
 		--enable-tls \
-		--enable-languages=c,c++ \
+		--enable-languages=c,c++,d \
 		--disable-libmudflap \
 		--disable-libssp \
 		--disable-libquadmath \
